@@ -5,7 +5,7 @@ const userRead = require ("./utils/generateMarkdown")
 // TODO: Create an array of questions for user input
 const questions = [{
     type: 'input',
-    name: 'Project Title',
+    name: 'projectTitle',
     message: 'What is the title of your project?',
 },
 {
@@ -57,10 +57,20 @@ const questions = [{
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName,data, (err) =>
+    err ? console.log(err): console.log('successfully wrote README'));
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then (function(data){
+        let file = "samepleREADME.md"
+        writeToFile(file,userRead(data));
+    });
+    
+};
 
 // Function call to initialize app
 init();
