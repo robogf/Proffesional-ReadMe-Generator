@@ -25,11 +25,17 @@ function generateMarkdown(data) {
     SIL: "[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)",
 
   }
-  
+  let badge =license[data.license]
+
   return `# ${data.projectTitle}
 
-  ##Description 
+  ${badge}
+
+  ## Description 
   ${data.Description}
+
+  ## License 
+  ${data.license}
 
   ## Table of Contents 
   [Installation](#installation)
@@ -43,6 +49,7 @@ function generateMarkdown(data) {
 
   ## Usage
   ${data.usage}
+
 
   ## Tests 
   ${data.tests}
