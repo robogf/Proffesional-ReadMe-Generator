@@ -2,7 +2,7 @@
 
 ## link 
 Theres no depoloyed link for this project but a video showing how to use it!
-![Video Link](https://watch.screencastify.com/v/UoJ7n16giswEWcOWQQLi)
+[Video](https://watch.screencastify.com/v/UoJ7n16giswEWcOWQQLi)
 
 
 ## Example Picture 
